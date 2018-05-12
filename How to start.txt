@@ -1,0 +1,52 @@
+
+Install Arduino IDE (i used 1.6.13) on your computer
+Select board MKR1000
+
+copy libraries to Arduino LIB Folder
+.....\Documents\Arduino\libraries
+
+Update to latest board version (in IDE)
+
+!!!!!Important !!!!!!
+---------------------
+Update WIFI Firmware to version 19.5.4
+do NOT update this LIB-Files !!!!
+
+
+Adjust Arduino sketch "CATControl.ino"
+--------------------------------------
+#define WLAN_SSID "My_WLAN_SSID"
+#define WLAN_PASSWD "My_WLAN_Password"
+#define NET_IP "192.168.1.17"
+#define NET_SNM "255.255.255.0"
+#define NET_GW "192.168.1.1"
+#define NET_DNS "192.168.1.1"
+
+// Date / Time
+#define TIMEOFFSET 1               // Time offset (h) +/- for your time-zone
+#define USEDST true                // Use sommer/wintertime (adjust time in summer +1h)
+
+-----
+
+Upload Arduino sketch to the board
+----------------------------------
+After startup there should be a short beep and the Error LED should go on. Quitt the error by pressing the START/AUTO Button.
+
+Upload WEB-Page to the (WIFI)
+---------------------------------
+Execute "TCPSendFile.jar" (Set Board IP, Select WEB-Page: index1_compressed.html)
+Max WEB-Page size: 39kByte -> index.html should be compressed before download
+You can use this compressor: https://htmlcompressor.com/compressor/
+
+Upload cleaning programs to arduino (WIFI)
+------------------------------------------
+Execute "TCPSendFile.jar" (Set Board IP, Select tasklist: e.g. Full_1.txt)
+Max 5 tasklists (1-5)
+Max. 390 lines / tasklist
+
+During upload, it make sense to enable the monitor in the arduino IDE (at least for the first time)
+
+WEB-Page for configuration
+--------------------------
+use Firefox: http://192.168.1.17:8080
+You should see the WEB-Page now

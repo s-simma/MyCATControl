@@ -1,0 +1,37 @@
+#######################################
+# Syntax Coloring Map For RTC
+#######################################
+
+#######################################
+# Datatypes (KEYWORD1)
+#######################################
+
+CATGenie		KEYWORD1
+
+#######################################
+# Methods and Functions (KEYWORD2)
+#######################################
+
+begin	KEYWORD2
+runL	KEYWORD2
+runI	KEYWORD2
+startCleaning	KEYWORD2
+stopCleaning	KEYWORD2
+isCleaning	KEYWORD2
+getCleaningPointer	KEYWORD2
+getRemainingTime	KEYWORD2
+getError	KEYWORD2
+getWaterSensor	KEYWORD2
+getOutput	KEYWORD2
+setOutput	KEYWORD2
+resetOutput	KEYWORD2
+flashOutput	KEYWORD2
+resetOutputAll	KEYWORD2
+newProgram	KEYWORD2
+addProgTask	KEYWORD2
+saveProgram	KEYWORD2
+
+
+#######################################
+# Constants (LITERAL1)
+#######################################

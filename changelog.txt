@@ -1,0 +1,6 @@
+10.5.2018 v1.1
+CAT-In detection handled now with "OneButton" in loop
+(easier to detect false positive)
+
+21.12.2017
+v1.0 Initial version

@@ -1,0 +1,24 @@
+#######################################
+# Syntax Coloring Map For DS1388
+#######################################
+
+#######################################
+# Datatypes (KEYWORD1)
+#######################################
+
+rtcDS1388	KEYWORD1
+
+#######################################
+# Methods and Functions (KEYWORD2)
+#######################################
+adjust	KEYWORD2
+now	KEYWORD2
+isrunning	KEYWORD2
+getEEPROMBank	KEYWORD2
+EEPROMWrite	KEYWORD2
+EEPROMRead	KEYWORD2
+EEPROMWritePage	KEYWORD2
+EEPROMReadPage	KEYWORD2
+startWatchdogTimer	KEYWORD2
+resetWatchdogTimer	KEYWORD2
+setTrickleCharger	KEYWORD2

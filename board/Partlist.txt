@@ -1,0 +1,153 @@
+Partlist
+
+Exported from CatGenie120.sch at 30.04.2018 11:56
+
+EAGLE Version 7.6.0 Copyright (c) 1988-2016 CadSoft
+
+Assembly variant: 
+
+Part     Value                   Device                  Package                     Library                        Sheet
+
++3V3                             1,6/0,8                 1,6/0,8                     wirepad                        1
++5V                              1,6/0,8                 1,6/0,8                     wirepad                        1
+C1       1000UF                  EEE-FC1C221AP-CASE-G    CAPAE1030X1050N             Panasonic-EEE0_EEE1_EEE2_EEEFC 1
+C2       100nF                   C1206C104K5RACTU        CAPC3216X88N                my_library1                    1
+C3       47UF                    EEE-0JA470SR-CASE-C     CAPAE530X610N               Panasonic-EEE0_EEE1_EEE2_EEEFC 1
+C4       100nF                   C1206C104K5RACTU        CAPC3216X88N                my_library1                    1
+C5       100nF                   C1206C104K5RACTU        CAPC3216X88N                my_library1                    1
+C6       100nF                   C1206C104K5RACTU        CAPC3216X88N                my_library1                    1
+C7       100nF                   C1206C104K5RACTU        CAPC3216X88N                my_library1                    1
+C8       100nF                   C1206C104K5RACTU        CAPC3216X88N                my_library1                    1
+C9       100nF                   C1206C104K5RACTU        CAPC3216X88N                my_library1                    1
+C10      10nF                    C1206C104K5RACTU        CAPC3216X88N                my_library1                    1
+C11      1,5F/3,6V               SUPERCAP-RM5            SUPERCAP-RM5                my_library1                    1
+C12      100nF                   C1206C104K5RACTU        CAPC3216X88N                my_library1                    1
+C13      100nF                   C1206C104K5RACTU        CAPC3216X88N                my_library1                    2
+C14      10nF                    C1206C104K5RACTU        CAPC3216X88N                my_library1                    1
+C15      100nF                   C1206C104K5RACTU        CAPC3216X88N                my_library1                    1
+C16      100nF                   C1206C104K5RACTU        CAPC3216X88N                my_library1                    1
+C17      10nF                    C1206C104K5RACTU        CAPC3216X88N                my_library1                    1
+C40      47UF                    EEE-0JA470SR-CASE-C     CAPAE530X610N               Panasonic-EEE0_EEE1_EEE2_EEEFC 2
+C60      100nF                   C1206C104K5RACTU        CAPC3216X88N                my_library1                    2
+C70      100nF                   C1206C104K5RACTU        CAPC3216X88N                my_library1                    2
+C71      100nF                   C1206C104K5RACTU        CAPC3216X88N                my_library1                    2
+C101     100nF/440V              ANLAUF-KONDENSATOR-RM22 ANLAUF-KONDENSATOR-RM22     my_library1                    2
+C102     100nF                   ANLAUF-KONDENSATOR-RM22 ANLAUF-KONDENSATOR-RM22     my_library1                    2
+C103     330nF                   ANLAUF-KONDENSATOR-RM37 ANLAUF-KONDENSATOR-RM37     my_library1                    2
+D1       1N4148                  DIODE-D-5               D-5                         diode                          1
+D51      1N4148                  DIODE-D-5               D-5                         diode                          2
+D52      1N4148                  DIODE-D-5               D-5                         diode                          2
+D53      1N4148                  DIODE-D-5               D-5                         diode                          2
+D54      1N4148                  DIODE-D-5               D-5                         diode                          2
+D55      1N4148                  DIODE-D-5               D-5                         diode                          2
+D56      1N4148                  DIODE-D-5               D-5                         diode                          2
+D57      1N4148                  DIODE-D-5               D-5                         diode                          2
+D58      1N4148                  DIODE-D-5               D-5                         diode                          2
+D60      1N4004                  1N4004                  DO41-10                     adafruit                       2
+F1       10A                     SICHERUNGSHALTER        SICHERUNGSHALTER            my_library1                    1
+GND                              1,6/0,8                 1,6/0,8                     wirepad                        1
+IC1      LM393D                  LM393D                  SO08                        linear                         2
+J1                               JST-EH-03-PIN           JST-EH-03-PIN               JST XH Connectors v1-0         2
+J2       5267-6                  5267-6                  5267-6                      con-molex-spox                 2
+J3       5267-6                  5267-6                  5267-6                      con-molex-spox                 2
+J4                               KK-156-3                KK-156-3                    con-molex                      2
+J5                               KK-156-2                KK-156-2                    con-molex                      2
+J6       SUPU-SERIE_B_1X3        SUPU-SERIE_B_1X3        SUPU-SERIE_B_1X3            my_library1                    2
+J7       JST-XH-02-PIN-ROUND-PAD JST-XH-02-PIN-ROUND-PAD JST-XH-02-PACKAGE-ROUND-PAD JST XH Connectors v1-0         2
+J8       JST-XH-05-PIN-ROUND-PAD JST-XH-05-PIN-ROUND-PAD JST-XH-05-PACKAGE-ROUND-PAD JST XH Connectors v1-0         2
+J9                               MOLEX-1X3               MOLEX-1X3                   my_library1                    2
+J10      MOLEX-1X2               MOLEX-1X2               MOLEX-1X2                   my_library1                    1
+J11                              MOLEX-1X3               MOLEX-1X3                   my_library1                    1
+JP1                              JP1Q                    JP1                         jumper                         1
+MKR1000                          GENUINOMKR1000          GENUINOMKR1000              my_library1                    1
+MP       FLACHSTECKER-1POLIG     FLACHSTECKER-1POLIG     FLACHSTECKER-1POLIG         my_library1                    1
+O1       G3VM-61G1               MOSFET_RELAIS           MOSFET-RELAIS               my_library1                    2
+O2                               MOSFET_RELAIS           MOSFET-RELAIS               my_library1                    2
+O3                               MOSFET_RELAIS           MOSFET-RELAIS               my_library1                    2
+O4                               MOSFET_RELAIS           MOSFET-RELAIS               my_library1                    2
+O5       G3VM-61G1               MOSFET_RELAIS           MOSFET-RELAIS               my_library1                    2
+O6                               MOSFET_RELAIS           MOSFET-RELAIS               my_library1                    2
+O7                               MOSFET_RELAIS           MOSFET-RELAIS               my_library1                    2
+O8                               MOSFET_RELAIS           MOSFET-RELAIS               my_library1                    2
+O60      SFH6106-3               SFH6106-3               SFH6106-3                   my_library1                    2
+PH       FLACHSTECKER-1POLIG     FLACHSTECKER-1POLIG     FLACHSTECKER-1POLIG         my_library1                    1
+Q1       32,768kHz               CRYSTALTC26V            TC26V                       adafruit                       1
+R1       VARISTOR-7,5            VARISTOR-7,5            R-7,5                       varistor                       1
+R2       10k                     WIEDERSTAND_802         WIEDERSTAND_802             my_library1                    1
+R3       3.3k                    WIEDERSTAND_802         WIEDERSTAND_802             my_library1                    1
+R4       3.3k                    WIEDERSTAND_802         WIEDERSTAND_802             my_library1                    1
+R5       4k7                     WIEDERSTAND_802         WIEDERSTAND_802             my_library1                    1
+R6       18k                     WIEDERSTAND_802         WIEDERSTAND_802             my_library1                    1
+R7       18k                     WIEDERSTAND_802         WIEDERSTAND_802             my_library1                    1
+R8       180R                    R-EU_M1206              M1206                       resistor                       1
+R9       150R                    2NBS16-8E               SO16                        resistor-bourns                1
+R10      4k7                     WIEDERSTAND_802         WIEDERSTAND_802             my_library1                    1
+R11      47k                     WIEDERSTAND_802         WIEDERSTAND_802             my_library1                    1
+R40      220R                    WIEDERSTAND_802         WIEDERSTAND_802             my_library1                    2
+R41      560R                    WIEDERSTAND_802         WIEDERSTAND_802             my_library1                    2
+R42      1k                      WIEDERSTAND_802         WIEDERSTAND_802             my_library1                    2
+R43      180R                    R-EU_R1206              R1206                       rcl                            2
+R44      4k7                     WIEDERSTAND_802         WIEDERSTAND_802             my_library1                    2
+R45      100R                    R-EU_R1206              R1206                       rcl                            2
+R46      220R                    WIEDERSTAND_802         WIEDERSTAND_802             my_library1                    2
+R47      10k                     WIEDERSTAND_802         WIEDERSTAND_802             my_library1                    2
+R51      270R                    R-EU_R1206              R1206                       rcl                            2
+R52      270R                    R-EU_R1206              R1206                       rcl                            2
+R53      270R                    R-EU_R1206              R1206                       rcl                            2
+R54      270R                    R-EU_R1206              R1206                       rcl                            2
+R55      270R                    R-EU_R1206              R1206                       rcl                            2
+R56      270R                    R-EU_R1206              R1206                       rcl                            2
+R57      270R                    R-EU_R1206              R1206                       rcl                            2
+R58      270R                    R-EU_R1206              R1206                       rcl                            2
+R60      13k/250V/3W             R-EU_R2512              R2512                       rcl                            2
+R61      13k/250V/3W             R-EU_R2512              R2512                       rcl                            2
+R62      4k7                     WIEDERSTAND_802         WIEDERSTAND_802             my_library1                    2
+R63      1M                      WIEDERSTAND_802         WIEDERSTAND_802             my_library1                    2
+R70      220R                    WIEDERSTAND_802         WIEDERSTAND_802             my_library1                    2
+R71      560R                    WIEDERSTAND_802         WIEDERSTAND_802             my_library1                    2
+R72      1k                      WIEDERSTAND_802         WIEDERSTAND_802             my_library1                    2
+R73      1k                      WIEDERSTAND_802         WIEDERSTAND_802             my_library1                    2
+R74      100k                    WIEDERSTAND_802         WIEDERSTAND_802             my_library1                    2
+R75      47k                     WIEDERSTAND_802         WIEDERSTAND_802             my_library1                    2
+R76      47k                     WIEDERSTAND_802         WIEDERSTAND_802             my_library1                    2
+R77      4k7                     WIEDERSTAND_802         WIEDERSTAND_802             my_library1                    2
+R78      220R                    WIEDERSTAND_802         WIEDERSTAND_802             my_library1                    2
+R79      220R                    WIEDERSTAND_802         WIEDERSTAND_802             my_library1                    2
+R80      560R                    WIEDERSTAND_802         WIEDERSTAND_802             my_library1                    2
+R81      1k                      WIEDERSTAND_802         WIEDERSTAND_802             my_library1                    2
+R82      200R                    R-EU_R1206              R1206                       rcl                            2
+R83      220R                    WIEDERSTAND_802         WIEDERSTAND_802             my_library1                    2
+R84      10k                     WIEDERSTAND_802         WIEDERSTAND_802             my_library1                    2
+R85      4k7                     WIEDERSTAND_802         WIEDERSTAND_802             my_library1                    2
+R86      4k7                     WIEDERSTAND_802         WIEDERSTAND_802             my_library1                    2
+R87      47k                     WIEDERSTAND_802         WIEDERSTAND_802             my_library1                    2
+R100     2,4k/3W/600V            R-STEHEND               R-STEHEND                   my_library1                    2
+RL1                              G6RN-1-5VDC             G6RN-1-5VDC                 my_library1                    2
+RL2                              G6RN-1-5VDC             G6RN-1-5VDC                 my_library1                    2
+RL3                              G6RN-1-5VDC             G6RN-1-5VDC                 my_library1                    2
+RL4                              G6RN-1-5VDC             G6RN-1-5VDC                 my_library1                    2
+RL5                              G6RN-1-5VDC             G6RN-1-5VDC                 my_library1                    2
+RL6                              G6RN-1-5VDC             G6RN-1-5VDC                 my_library1                    2
+RL7                              G6RN-1-5VDC             G6RN-1-5VDC                 my_library1                    2
+RL8                              G6RN-1-5VDC             G6RN-1-5VDC                 my_library1                    2
+SG1                              PIEZZO-BUZZER1          PIEZZO-BUZZER1              my_library1                    1
+T1       BSS138P                 BSS138P                 SOT23                       my_library1                    1
+T2       BSS138P                 BSS138P                 SOT23                       my_library1                    1
+T40      BSS138P                 BSS138P                 SOT23                       my_library1                    2
+T41      IRLML2244               IRLML2244               IRLML2240                   my_library1                    2
+T42      BSS138P                 BSS138P                 SOT23                       my_library1                    2
+T60      BSS138P                 BSS138P                 SOT23                       my_library1                    2
+T70      BSS138P                 BSS138P                 SOT23                       my_library1                    2
+T71      IRLML2244               IRLML2244               IRLML2240                   my_library1                    2
+T72      BSS138P                 BSS138P                 SOT23                       my_library1                    2
+T73      IRLML2244               IRLML2244               IRLML2240                   my_library1                    2
+T74      BSS138P                 BSS138P                 SOT23                       my_library1                    2
+U$1      PMAS5 S05-L             PMAS5-S05-L             PMAS5-S05L                  my_library1                    1
+U1       MCP1825S-3302E/DB       MCP1825S-3302E/DB       MCP1825S-3302E-SOT-223-3    my_library1                    1
+U2       24LC512-E/SN            24LC512-E/SN            24LC512-SOIC-8              my_library1                    1
+U3       DSS1388                 DSS1388                 DS1388                      my_library1                    1
+U4       TLC555CDR               TLC555CDR               TLC555-SOIC-8               my_library1                    1
+U5       MCP23S08SO              MCP23S08SO              SO-18W                      microchip-dspic                1
+U6       MCP23008SO              MCP23008SO              SO-18W                      microchip-dspic                2
+U7       MAX3483ECSA+T           MAX3483                 MAX3483                     my_library1                    1
+X1                               PINHD-1X11              1X11                        pinhead                        1

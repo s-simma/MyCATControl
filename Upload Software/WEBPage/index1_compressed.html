@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=UTF-8">
+<title>Cat-Control</title>
+<style>.button{border-top:1px solid #96d1f8;background:#65a9d7;background:-webkit-gradient(linear,left top,left bottom,from(#3e779d),to(#65a9d7));background:-webkit-linear-gradient(top,#3e779d,#65a9d7);background:-moz-linear-gradient(top,#3e779d,#65a9d7);background:-ms-linear-gradient(top,#3e779d,#65a9d7);background:-o-linear-gradient(top,#3e779d,#65a9d7);padding:8.5px 17px;-webkit-border-radius:19px;-moz-border-radius:19px;border-radius:19px;-webkit-box-shadow:rgba(0,0,0,1) 0 1px 0;-moz-box-shadow:rgba(0,0,0,1) 0 1px 0;box-shadow:rgba(0,0,0,1) 0 1px 0;text-shadow:rgba(0,0,0,.4) 0 1px 0;color:white;font-size:1.3em;font-family:Helvetica,Arial,Sans-Serif;text-decoration:none;vertical-align:middle}.button:hover{border-top-color:#4187b5;background:#4187b5;color:#ccc;cursor:pointer}.button:active{border-top-color:#1b435e;background:#1b435e}.onoffswitch{position:relative;width:110px;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none}.onoffswitch-checkbox{display:none}.onoffswitch-label{display:block;overflow:hidden;cursor:pointer;border:2px solid #999;border-radius:20px}.onoffswitch-inner{display:block;width:200%;margin-left:-100%}.onoffswitch-inner:before,.onoffswitch-inner:after{display:block;float:left;width:50%;height:40px;padding:0;line-height:40px;font-size:16px;color:white;font-family:Trebuchet,Arial,sans-serif;font-weight:bold;box-sizing:border-box}.onoffswitch-inner:before{content:"ON";padding-left:10px;background-color:#f31515;color:#fff}.onoffswitch-inner:after{content:"OFF";padding-right:10px;background-color:#eee;color:#999;text-align:right}.onoffswitch-switch{display:block;width:20px;margin:10px;background:#fff;position:absolute;top:0;bottom:0;right:65px;border:2px solid #999;border-radius:20px}.onoffswitch-checkbox:checked+.onoffswitch-label .onoffswitch-inner{margin-left:0}.onoffswitch-checkbox:checked+.onoffswitch-label .onoffswitch-switch{right:0}.output-buttons input[type="radio"]{visibility:hidden}.output-buttons{position:relative}.output-buttons label{border:1px solid #333;border-radius:.5em;padding:1.1em;cursor:pointer}.output-buttons input{position:absolute;width:1px;height:1px;top:0;left:0}.output-buttons input:checked+label:nth-of-type(1){background:#f94513;color:#fcfcfc;box-shadow:none}.output-buttons input:checked+label:nth-of-type(2){background:#ebeaea;color:#040404;box-shadow:none}.output-buttons input:checked+label:nth-of-type(3){background:#f94513;color:#fcfcfc;box-shadow:none}.output-buttons label:nth-of-type(1){border-radius:.5em 0 0 .5em;width:50px;display:inline-block}.output-buttons label:nth-of-type(2){margin:0,5em 0;border-radius:0;width:50px;display:inline-block}.output-buttons label:nth-of-type(3){border-radius:0 .5em .5em 0;width:50px;display:inline-block}.clean-program input[type="radio"]{visibility:hidden}.clean-program{position:relative}.clean-program label{border:1px solid #333;border-radius:.5em;padding:1em;cursor:pointer}.clean-program input{position:absolute;width:1px;height:1px;top:0;left:0}.clean-program input:checked+label{background:#1da905;color:#fcfcfc;box-shadow:none}.clean-program label{border-radius:.5em .5em .5em .5em;width:50px;display:inline-block}article.infobox section{position:absolute;display:block;width:650px;height:720px;top:200px;padding:20px;background-color:#c5d2de;z-index:0}article.infobox section:first-child{z-index:1}article.infobox section h2{position:absolute;left:0;top:-50px;width:154px;height:49px;font-family:Verdana;font-size:1.2em;margin:0;background-color:#194b7d;border-radius:15px 15px 0 0;border:solid #fff;border-width:1px 1px 0 0}article.infobox section:nth-child(2) h2{left:153px}article.infobox section:nth-child(3) h2{left:308px}article.infobox section:nth-child(4) h2{left:463px}article.infobox section h2 a{display:block;margin:5px 0 0 0;text-align:center;text-decoration:none;color:#c5d2de}article.infobox section:target,article.infobox section:target h2{color:#000;background-color:#c5d2de;z-index:2}article.infobox section:target h2 a{color:#194b7d;z-index:2}</style>
+<script>function submitForm(a){document.getElementById("typeId").value=a;document.myForm.submit()}</script>
+<script>function refreshForm(){GetArduinoData()}</script>
+<script>function GetArduinoData(){nochache="&nochache="+Math.random()*1000000;var a=new XMLHttpRequest();a.onreadystatechange=function(){if(this.readyState==4){if(this.status==200){if(this.responseXML!=null){document.getElementById("prgver").value=this.responseXML.getElementsByTagName("prgver")[0].childNodes[0].nodeValue;if(this.responseXML.getElementsByTagName("autoref")[0].childNodes[0].nodeValue==1){document.getElementById("autoref").checked=true}else{document.getElementById("autoref").checked=false}if(this.responseXML.getElementsByTagName("error")[0].childNodes[0].nodeValue==1){document.getElementById("error").checked=true}else{document.getElementById("error").checked=false}if(this.responseXML.getElementsByTagName("clean")[0].childNodes[0].nodeValue==1){document.getElementById("clean").checked=true}else{document.getElementById("clean").checked=false}if(this.responseXML.getElementsByTagName("locked")[0].childNodes[0].nodeValue==1){document.getElementById("locked").checked=true}else{document.getElementById("locked").checked=false}var d=document.getElementsByName("cleanprg");var c=this.responseXML.getElementsByTagName("cleanprg")[0].childNodes[0].nodeValue;for(var b=0;b<d.length;b++){d[b].checked=false}for(var b=0;b<d.length;b++){if(d[b].value==c){d[b].checked=true;break}}document.getElementById("info").value=this.responseXML.getElementsByTagName("info")[0].childNodes[0].nodeValue;if(this.responseXML.getElementsByTagName("service")[0].childNodes[0].nodeValue==1){document.getElementById("service").checked=true}else{document.getElementById("service").checked=false}if(this.responseXML.getElementsByTagName("chlock")[0].childNodes[0].nodeValue==1){document.getElementById("chlock").checked=true}else{document.getElementById("chlock").checked=false}var d=document.getElementsByName("drain");var c=this.responseXML.getElementsByTagName("drain")[0].childNodes[0].nodeValue;for(var b=0;b<d.length;b++){d[b].checked=false}for(var b=0;b<d.length;b++){if(d[b].value==c){d[b].checked=true;break}}var d=document.getElementsByName("bowl");var c=this.responseXML.getElementsByTagName("bowl")[0].childNodes[0].nodeValue;for(var b=0;b<d.length;b++){d[b].checked=false}for(var b=0;b<d.length;b++){if(d[b].value==c){d[b].checked=true;break}}var d=document.getElementsByName("sco");var c=this.responseXML.getElementsByTagName("sco")[0].childNodes[0].nodeValue;for(var b=0;b<d.length;b++){d[b].checked=false}for(var b=0;b<d.length;b++){if(d[b].value==c){d[b].checked=true;break}}var d=document.getElementsByName("dryer");var c=this.responseXML.getElementsByTagName("dryer")[0].childNodes[0].nodeValue;for(var b=0;b<d.length;b++){d[b].checked=false}for(var b=0;b<d.length;b++){if(d[b].value==c){d[b].checked=true;break}}var d=document.getElementsByName("water");var c=this.responseXML.getElementsByTagName("water")[0].childNodes[0].nodeValue;for(var b=0;b<d.length;b++){d[b].checked=false}for(var b=0;b<d.length;b++){if(d[b].value==c){d[b].checked=true;break}}var d=document.getElementsByName("dos");var c=this.responseXML.getElementsByTagName("dos")[0].childNodes[0].nodeValue;for(var b=0;b<d.length;b++){d[b].checked=false}for(var b=0;b<d.length;b++){if(d[b].value==c){d[b].checked=true;break}}document.getElementById("watval").value=this.responseXML.getElementsByTagName("watval")[0].childNodes[0].nodeValue;if(this.responseXML.getElementsByTagName("watvalve")[0].childNodes[0].nodeValue==1){document.getElementById("watvalve").checked=true}else{document.getElementById("watvalve").checked=false}document.getElementById("hour").value=this.responseXML.getElementsByTagName("hour")[0].childNodes[0].nodeValue;document.getElementById("min").value=this.responseXML.getElementsByTagName("min")[0].childNodes[0].nodeValue;document.getElementById("day").value=this.responseXML.getElementsByTagName("day")[0].childNodes[0].nodeValue;document.getElementById("month").value=this.responseXML.getElementsByTagName("month")[0].childNodes[0].nodeValue;document.getElementById("year").value=this.responseXML.getElementsByTagName("year")[0].childNodes[0].nodeValue;document.getElementById("tzoffs").value=this.responseXML.getElementsByTagName("tzoffs")[0].childNodes[0].nodeValue;if(this.responseXML.getElementsByTagName("dst")[0].childNodes[0].nodeValue=="1"){document.getElementById("dst").checked=true}else{document.getElementById("dst").checked=false}document.getElementById("intime").value=this.responseXML.getElementsByTagName("intime")[0].childNodes[0].nodeValue;document.getElementById("delay").value=this.responseXML.getElementsByTagName("delay")[0].childNodes[0].nodeValue;document.getElementById("force").value=this.responseXML.getElementsByTagName("force")[0].childNodes[0].nodeValue;document.getElementById("lhfrom").value=this.responseXML.getElementsByTagName("lhfrom")[0].childNodes[0].nodeValue;document.getElementById("lmfrom").value=this.responseXML.getElementsByTagName("lmfrom")[0].childNodes[0].nodeValue;document.getElementById("lhto").value=this.responseXML.getElementsByTagName("lhto")[0].childNodes[0].nodeValue;document.getElementById("lmto").value=this.responseXML.getElementsByTagName("lmto")[0].childNodes[0].nodeValue;document.getElementById("l2hfrom").value=this.responseXML.getElementsByTagName("l2hfrom")[0].childNodes[0].nodeValue;document.getElementById("l2mfrom").value=this.responseXML.getElementsByTagName("l2mfrom")[0].childNodes[0].nodeValue;document.getElementById("l2hto").value=this.responseXML.getElementsByTagName("l2hto")[0].childNodes[0].nodeValue;document.getElementById("l2mto").value=this.responseXML.getElementsByTagName("l2mto")[0].childNodes[0].nodeValue;document.getElementById("tasklpow").value=this.responseXML.getElementsByTagName("tasklpow")[0].childNodes[0].nodeValue;document.getElementById("tasklman").value=this.responseXML.getElementsByTagName("tasklman")[0].childNodes[0].nodeValue;document.getElementById("taskl1").value=this.responseXML.getElementsByTagName("taskl1")[0].childNodes[0].nodeValue;document.getElementById("taskl2").value=this.responseXML.getElementsByTagName("taskl2")[0].childNodes[0].nodeValue;document.getElementById("taskl3").value=this.responseXML.getElementsByTagName("taskl3")[0].childNodes[0].nodeValue;document.getElementById("taskl4").value=this.responseXML.getElementsByTagName("taskl4")[0].childNodes[0].nodeValue;document.getElementById("tasklcat").value=this.responseXML.getElementsByTagName("tasklcat")[0].childNodes[0].nodeValue;document.getElementById("ssid").value=this.responseXML.getElementsByTagName("ssid")[0].childNodes[0].nodeValue;document.getElementById("passw").value=this.responseXML.getElementsByTagName("passw")[0].childNodes[0].nodeValue;document.getElementById("ipadr").value=this.responseXML.getElementsByTagName("ipadr")[0].childNodes[0].nodeValue;document.getElementById("subn").value=this.responseXML.getElementsByTagName("subn")[0].childNodes[0].nodeValue;document.getElementById("gatew").value=this.responseXML.getElementsByTagName("gatew")[0].childNodes[0].nodeValue;document.getElementById("dns").value=this.responseXML.getElementsByTagName("dns")[0].childNodes[0].nodeValue;document.getElementById("mqttsrv").value=this.responseXML.getElementsByTagName("mqttsrv")[0].childNodes[0].nodeValue;document.getElementById("mqttid").value=this.responseXML.getElementsByTagName("mqttid")[0].childNodes[0].nodeValue;document.getElementById("mqttpub").value=this.responseXML.getElementsByTagName("mqttpub")[0].childNodes[0].nodeValue;document.getElementById("mqttsub").value=this.responseXML.getElementsByTagName("mqttsub")[0].childNodes[0].nodeValue;if(document.getElementById("autoref").checked==true){setTimeout("GetArduinoData()",5000)}}}}};a.open("Get","ajax_data"+nochache,true);a.send(null)};</script>
+</head>
+<body onload=GetArduinoData()>
+<form style="font:1.1em Arial;margin-left:20px;min-width:450px" name=myForm action=outputChange method=POST>
+<label style=font-size:1.5em>CAT-Control <input type=text style=border-width:0;font-size:1.0em;width:60px id=prgver value=v-.- readonly></label>
+<p></p>
+<button class=button type=button name=refresh onclick=refreshForm()>Refresh</button>
+<input type=checkbox id=autoref name=autoref onclick=submitForm(0)>Enable auto refresh after 5sec<br>
+<article class=infobox>
+<section id=tab1>
+<h2><a id=tabid1 href=#tab1>Home</a></h2>
+<table style=width:100%;font-size:1.3em>
+<tr>
+<td height=60 width=230>Error</td>
+<td height=60>
+<div class=onoffswitch>
+<input type=checkbox id=error name=error class=onoffswitch-checkbox onclick=submitForm(2)>
+<label class=onoffswitch-label for=error>
+<span class=onoffswitch-inner></span>
+<span class=onoffswitch-switch></span>
+</label>
+</div>
+</td>
+</tr>
+</table>
+<table style=width:100%;font-size:1.3em>
+<tr>
+<td height=60 width=230>Clean Watersensor</td>
+<td height=60>
+<div class=onoffswitch>
+<input type=checkbox id=clean name=clean class=onoffswitch-checkbox disabled=disabled>
+<label class=onoffswitch-label for=clean>
+<span class=onoffswitch-inner></span>
+<span class=onoffswitch-switch></span>
+</label>
+</div>
+</td>
+</tr>
+</table>
+<table style=width:100%;font-size:1.3em>
+<tr>
+<td height=60 width=230>Cleaning locked</td>
+<td height=60>
+<div class=onoffswitch>
+<input type=checkbox id=locked name=locked class=onoffswitch-checkbox onclick=submitForm(3)>
+<label class=onoffswitch-label for=locked>
+<span class=onoffswitch-inner></span>
+<span class=onoffswitch-switch></span>
+</label>
+</div>
+</td>
+</tr>
+</table>
+<table style=width:100%;font-size:1.3em>
+<tr>
+<td height=60 width=230>Child Lock</td>
+<td height=60>
+<div class=onoffswitch>
+<input type=checkbox id=chlock name=chlock class=onoffswitch-checkbox onclick=submitForm(4)>
+<label class=onoffswitch-label for=chlock>
+<span class=onoffswitch-inner></span>
+<span class=onoffswitch-switch></span>
+</label>
+</div>
+</td>
+</tr>
+</table>
+<p></p>
+<div class=clean-program>
+<input type=radio id=prg0 name=cleanprg value=0 onclick="submitForm(5)"/>
+<label for=prg0>MAN</label>
+<input type=radio id=prg1 name=cleanprg value=1 onclick="submitForm(5)"/>
+<label for=prg1>1</label>
+<input type=radio id=prg2 name=cleanprg value=2 onclick="submitForm(5)"/>
+<label for=prg2>2</label>
+<input type=radio id=prg3 name=cleanprg value=3 onclick="submitForm(5)"/>
+<label for=prg3>3</label>
+<input type=radio id=prg4 name=cleanprg value=4 onclick="submitForm(5)"/>
+<label for=prg4>4</label>
+<input type=radio id=prg5 name=cleanprg value=5 onclick="submitForm(5)"/>
+<label for=prg5>CAT</label>
+</div>
+<p></p>
+<p></p>
+<input type=text style=border-style:solid;font-size:1.3em;width:550px id=info value readonly><br>
+<p></p>
+<p></p>
+<button class=button type=button name=start onclick=submitForm(1)>Start cleaning</button>
+</section>
+<section id=tab2>
+<h2><a id=tabid2 href=#tab2>Service</a></h2>
+<table style=width:100%;font-size:1.2em>
+<tr>
+<td height=70 width=210>Service Mode</td>
+<td height=70>
+<div class=onoffswitch>
+<input type=checkbox id=service name=service class=onoffswitch-checkbox onclick=submitForm(10)>
+<label class=onoffswitch-label for=service>
+<span class=onoffswitch-inner></span>
+<span class=onoffswitch-switch></span>
+</label>
+</div>
+</td>
+</tr>
+</table>
+<table style=width:100%;font-size:1.2em>
+<tr>
+<td height=70 width=210>Drain-Pump</td>
+<td height=70>
+<div class=output-buttons>
+<input type=radio id=drain_on name=drain value=ON onclick="submitForm(11)"/>
+<label for=drain_on>ON</label>
+<input type=radio id=drain_off name=drain value=OFF onclick="submitForm(11)"/>
+<label for=drain_off>OFF</label>
+</div>
+</td>
+</tr>
+<tr>
+<td height=70 width=210>Bowl-Motor</td>
+<td height=70>
+<div class=output-buttons>
+<input type=radio id=bowl_cw name=bowl value=CW onclick="submitForm(12)"/>
+<label for=bowl_cw>CW</label>
+<input type=radio id=bowl_off name=bowl value=OFF onclick="submitForm(12)"/>
+<label for=bowl_off>OFF</label>
+<input type=radio id=bowl_ccw name=bowl value=CCW onclick="submitForm(12)"/>
+<label for=bowl_ccw>CCW</label>
+</div>
+</td>
+</tr>
+<tr>
+<td height=70 width=210>Scopper-Motor</td>
+<td height=70>
+<div class=output-buttons>
+<input type=radio id=sco_up name=sco value=UP onclick="submitForm(13)"/>
+<label for=sco_up>UP</label>
+<input type=radio id=sco_off name=sco value=OFF onclick="submitForm(13)"/>
+<label for=sco_off>OFF</label>
+<input type=radio id=sco_down name=sco value=DOWN onclick="submitForm(13)"/>
+<label for=sco_down>DOWN</label>
+</div>
+</td>
+</tr>
+<tr>
+<td height=70 width=210>Dryer</td>
+<td height=70>
+<div class=output-buttons>
+<input type=radio id=dryer_on name=dryer value=ON onclick="submitForm(14)"/>
+<label for=dryer_on>ON</label>
+<input type=radio id=dryer_off name=dryer value=OFF onclick="submitForm(14)"/>
+<label for=dryer_off>OFF</label>
+</div>
+</td>
+</tr>
+<tr>
+<td height=70 width=210>Water</td>
+<td height=70>
+<div class=output-buttons>
+<input type=radio id=water_on name=water value=ON onclick="submitForm(15)"/>
+<label for=water_on>ON</label>
+<input type=radio id=water_off name=water value=OFF onclick="submitForm(15)"/>
+<label for=water_off>OFF</label>
+</div>
+</td>
+</tr>
+<tr>
+<td height=70 width=210>Dosage-Pump</td>
+<td height=70>
+<div class=output-buttons>
+<input type=radio id=dos_on name=dos value=ON onclick="submitForm(16)"/>
+<label for=dos_on>ON</label>
+<input type=radio id=dos_off name=dos value=OFF onclick="submitForm(16)"/>
+<label for=dos_off>OFF</label>
+</div>
+</td>
+</tr>
+</table>
+<br>
+<label style=font-size:1.2em>Water sensor (0-1024):<input type=text style=border-style:solid;font-size:1.0em;width:70px id=watval name=watval value readonly></label>
+<br>
+<label style=font-size:1.2em>Maintenance: higher 350, Free: lower 580, Hardware: higher 850</label>
+<br>
+<table style=width:100%;font-size:1.2em>
+<tr>
+<td height=70 width=210>Water valve</td>
+<td height=70>
+<div class=onoffswitch>
+<input type=checkbox id=watvalve name=watvalve class=onoffswitch-checkbox disabled=disabled>
+<label class=onoffswitch-label for=watvalve>
+<span class=onoffswitch-inner></span>
+<span class=onoffswitch-switch></span>
+</label>
+</div>
+</td>
+</tr>
+</table>
+</section>
+<section id=tab3>
+<h2><a id=tabid3 href=#tab3>Settings</a></h2>
+<p style=font-size:1.0em>Date/Time (dd.mm.yyyy hh:mm) UTC-Time for submit</p>
+<input type=text style=border-style:solid;font-size:1.0em;width:35px id=day name=day value>
+.<input type=text style=border-style:solid;font-size:1.0em;width:35px id=month name=month value>
+.<input type=text style=border-style:solid;font-size:1.0em;width:60px id=year name=year value>
+/<input type=text style=border-style:solid;font-size:1.0em;width:35px id=hour name=hour value>
+:<input type=text style=border-style:solid;font-size:1.0em;width:35px id=min name=min value>
+<p></p>
+<label style=font-size:1.0em>Time zone offset (h):<input type=text style=border-style:solid;font-size:1.0em;width:50px id=tzoffs name=tzoffs value></label>
+<p></p>
+<label style=font-size:1.0em>Enable DST:<input type=checkbox style=border-style:solid;font-size:1.0em;width:50px id=dst name=dst></label>
+<p></p>
+<button class=button type=button name=submdata1 onclick=submitForm(20)>Submit</button>
+<p>---------------------------------------------------------------------------------------------------------</p>
+<label style=font-size:1.0em>CAT in time (s):<input type=text style=border-style:solid;font-size:1.0em;width:50px id=intime name=intime value></label>
+<label style=font-size:1.0em>Delay Cleaning (min):<input type=text style=border-style:solid;font-size:1.0em;width:50px id=delay name=delay value></label>
+<label style=font-size:1.0em>Force Cleaning (h):<input type=text style=border-style:solid;font-size:1.0em;width:50px id=force name=force value></label>
+<p></p>
+<label style=font-size:1.0em>Do not clean from</label>
+<input type=text style=border-style:solid;font-size:1.0em;width:35px id=lhfrom name=lhfrom value>
+:<input type=text style=border-style:solid;font-size:1.0em;width:35px id=lmfrom name=lmfrom value>
+<label style=font-size:1.2em>to</label>
+<input type=text style=border-style:solid;font-size:1.0em;width:35px id=lhto name=lhto value>
+:<input type=text style=border-style:solid;font-size:1.0em;width:35px id=lmto name=lmto value>
+<p></p>
+<label style=font-size:1.0em>Do not clean from</label>
+<input type=text style=border-style:solid;font-size:1.0em;width:35px id=l2hfrom name=l2hfrom value>
+:<input type=text style=border-style:solid;font-size:1.0em;width:35px id=l2mfrom name=l2mfrom value>
+<label style=font-size:1.0em>to</label>
+<input type=text style=border-style:solid;font-size:1.0em;width:35px id=l2hto name=l2hto value>
+:<input type=text style=border-style:solid;font-size:1.0em;width:35px id=l2mto name=l2mto value>
+<p></p>
+<label style=font-size:1.0em>Tasklist after power-on if washing was interrupted:<input type=text style=border-style:solid;font-size:1.0em;width:45px id=tasklpow name=tasklpow value=0></label>
+<p></p>
+<label style=font-size:1.0em>MAN:<input type=text style=border-style:solid;font-size:1.0em;width:45px id=tasklman name=tasklman value=0></label>
+<label style=font-size:1.0em>1:<input type=text style=border-style:solid;font-size:1.0em;width:45px id=taskl1 name=taskl1 value=0></label>
+<label style=font-size:1.0em>2:<input type=text style=border-style:solid;font-size:1.0em;width:45px id=taskl2 name=taskl2 value=0></label>
+<label style=font-size:1.0em>3:<input type=text style=border-style:solid;font-size:1.0em;width:45px id=taskl3 name=taskl3 value=0></label>
+<label style=font-size:1.0em>4:<input type=text style=border-style:solid;font-size:1.0em;width:45px id=taskl4 name=taskl4 value=0></label>
+<label style=font-size:1.0em>CAT:<input type=text style=border-style:solid;font-size:1.0em;width:45px id=tasklcat name=tasklcat value=0></label>
+<p></p>
+<button class=button type=button name=submdata2 onclick=submitForm(21)>Submit</button>
+</section>
+<section id=tab4>
+<h2><a id=tabid4 href=#tab4>System</a></h2>
+<table style=width:100%;font-size:1.2em>
+<tr>
+<td>WLAN-SSID</td>
+<td><input type=text style=border-style:solid;font-size:1.0em;width:300px id=ssid name=ssid value></td>
+</tr>
+<tr>
+<td>WLAN-Password</td>
+<td><input type=text style=border-style:solid;font-size:1.0em;width:300px id=passw name=passw value></td>
+</tr>
+<tr>
+<td>IP (0.0.0.0)</td>
+<td><input type=text style=border-style:solid;font-size:1.0em;width:200px id=ipadr name=ipadr value></td>
+</tr>
+<tr>
+<td>Subnet (255.255.255.0)</td>
+<td><input type=text style=border-style:solid;font-size:1.0em;width:200px id=subn name=subn value></td>
+</tr>
+<tr>
+<td>Gateway (0.0.0.0)</td>
+<td><input type=text style=border-style:solid;font-size:1.0em;width:200px id=gatew name=gatew value></td>
+</tr>
+<tr>
+<td>DNS (0.0.0.0)</td>
+<td><input type=text style=border-style:solid;font-size:1.0em;width:200px id=dns name=dns value></td>
+</tr>
+<tr>
+<td>--</td>
+<td>--</td>
+</tr>
+<tr>
+<td>MQTT Server IP (0.0.0.0)</td>
+<td><input type=text style=border-style:solid;font-size:1.0em;width:200px id=mqttsrv name=mqttsrv value></td>
+</tr>
+<tr>
+<td>MQTT ID</td>
+<td><input type=text style=border-style:solid;font-size:1.0em;width:300px id=mqttid name=mqttid value></td>
+</tr>
+<tr>
+<td>MQTT Publish to</td>
+<td><input type=text style=border-style:solid;font-size:1.0em;width:300px id=mqttpub name=mqttpub value></td>
+</tr>
+<tr>
+<td>MQTT Subscribe from</td>
+<td><input type=text style=border-style:solid;font-size:1.0em;width:300px id=mqttsub name=mqttsub value></td>
+</tr>
+</table>
+<button class=button type=button name=submdata3 onclick=submitForm(22)>Submit</button>
+<p>---------------------------------------------------------------------------------------------------------</p>
+<button class=button type=button name=submdataR onclick=submitForm(99)>Restart</button>
+</section>
+</article>
+<input type=hidden id=typeId name=typeId value>
+</form>
+</body>
+</html>

@@ -1,0 +1,220 @@
+<CATGenie>
+
+////////////////////
+tasklist start 2
+
+// ---- Start wash 1 ----
+bowl cw
+water on
+wait 0.1
+water is on
+scopper down
+wait 25
+scopper up
+wait 1.2
+scopper stop
+water waitin 70
+water stop
+wait 65
+drainpump on
+wait 25
+drainpump stop
+wait 75
+drainpump on
+wait 25
+drainpump stop
+wait 10
+drainpump on
+wait 25
+drainpump stop
+wait 10
+drainpump on
+wait 65
+drainpump stop
+
+// ---- Start wash 2 ----
+water on
+wait 0.1
+water is on
+wait 7
+bowl ccw
+
+dospump on
+wait 10
+dospump stop
+
+bowl cw
+water waitin 70
+water stop
+drainpump on
+wait 25
+drainpump stop
+wait 75
+drainpump on
+wait 25
+drainpump stop
+wait 10
+drainpump on
+wait 25
+drainpump stop
+wait 10
+drainpump on
+wait 65
+drainpump stop
+
+// ---- Start wash 3 ----
+water on
+wait 0.1
+water is on
+wait 10
+bowl ccw
+wait 10
+bowl cw
+water waitin 70
+water stop
+
+bowl ccw
+drainpump on
+wait 66
+
+scopper up
+wait 0.3
+scopper stop
+
+// ---- Start Dry ----
+dryer on
+wait 40
+bowl cw
+wait 9
+bowl stop
+wait 15
+bowl cw
+drainpump stop
+wait 50
+bowl ccw
+wait 40
+bowl cw
+wait 50
+bowl ccw
+wait 40
+bowl cw
+wait 50
+bowl ccw
+wait 40
+bowl cw
+wait 50
+bowl ccw
+wait 40
+
+// shake 1
+scopper up
+wait 9.0
+bowl stop
+wait 1.0
+scopper stop
+wait 11
+bowl ccw
+wait 4.6
+scopper down
+wait 13
+scopper up
+wait 1.3
+scopper stop
+
+wait 40
+bowl cw
+wait 50
+bowl ccw
+wait 40
+bowl cw
+wait 50
+bowl ccw
+wait 40
+
+// shake 2
+scopper up
+wait 9.0
+bowl stop
+wait 1.0
+scopper stop
+wait 11
+bowl ccw
+wait 4.6
+scopper down
+wait 13
+scopper up
+wait 1.3
+scopper stop
+
+dospump on
+wait 3
+dospump stop
+
+wait 40
+bowl cw
+wait 40
+bowl ccw
+wait 40
+bowl cw
+wait 40
+bowl ccw
+wait 40
+
+// shake 3
+scopper up
+wait 10
+scopper stop
+wait 2
+scopper down
+wait 13
+scopper up
+wait 1.2
+scopper stop
+
+wait 45
+bowl cw
+wait 35
+bowl ccw
+wait 45
+bowl cw
+wait 35
+bowl ccw
+wait 45
+bowl cw
+wait 35
+
+scopper up
+wait 0.3
+scopper stop
+wait 20
+scopper up
+wait 0.3
+scopper stop
+wait 15
+scopper up
+wait 0.4
+scopper stop
+wait 20
+
+// ---- End Dry ----
+scopper up
+wait 10
+scopper down
+wait 7
+scopper up
+wait 15
+scopper down
+wait 0.4
+scopper stop
+
+drainpump stop
+dospump stop
+dryer stop
+wait 3
+bowl stop
+
+// At least here the sensor must be free
+water waitout 1
+
+tasklist end
+////////////////////
